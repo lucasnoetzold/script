@@ -9,17 +9,16 @@ import org.slf4j.LoggerFactory;
 
 @RequiredArgsConstructor
 @QuarkusMain
-public class Main implements QuarkusApplication {
+public class AppMain implements QuarkusApplication {
 
-    private static final Logger log = LoggerFactory.getLogger(Main.class);
+    private static final Logger log = LoggerFactory.getLogger(AppMain.class);
 
-    private final GreetingConfig greetingConfig;
+    private final AppConfig appConfig;
 
     @Override
     public int run(String... args) {
 
-        if (log.isInfoEnabled())
-            log.info("Message: {}", greetingConfig.message());
+        if (log.isInfoEnabled()) log.info("Message: {}", appConfig.message());
 
         return 0;
     }

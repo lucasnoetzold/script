@@ -2,8 +2,8 @@ package lucasnoetzold.script;
 
 import io.smallrye.config.ConfigMapping;
 
-@ConfigMapping(prefix = "greeting")
-public interface GreetingConfig {
+@ConfigMapping( prefix = "app" )
+public interface AppConfig {
 
     String message();
 
